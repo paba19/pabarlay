@@ -5,7 +5,7 @@ EAPI=7
 
 MY_P="${P/-/_}-1"
 
-inherit linux-info unpacker
+inherit linux-info unpacker systemd
 
 DESCRIPTION="NordVPN CLI tool for Linux"
 HOMEPAGE="https://nordvpn.com"
