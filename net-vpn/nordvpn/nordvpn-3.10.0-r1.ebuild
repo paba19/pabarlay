@@ -5,7 +5,7 @@ EAPI=7
 
 MY_P="${P/-/_}-1"
 
-inherit linux-info unpacker
+inherit linux-info unpacker systemd
 
 DESCRIPTION="NordVPN CLI tool for Linux"
 HOMEPAGE="https://nordvpn.com"
@@ -22,7 +22,7 @@ KEYWORDS="~amd64 ~arm ~arm64 ~x86"
 IUSE="nordlynx systemd"
 RESTRICT="mirror strip"
 
-RDEPEND="
+RDEPEND="acct-group/nordvpn
 	dev-libs/libxslt[crypt]
 	net-firewall/iptables
 	sys-apps/iproute2[iptables]
@@ -34,8 +34,7 @@ RDEPEND="
 	)
 	systemd? (
 		sys-apps/systemd
-	)
-	acct-group/nordvpn"
+	)"
 
 S="${WORKDIR}"
 
